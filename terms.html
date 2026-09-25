@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>מחשבון משכנתא – חישוב החזר חודשי | אלה אוזן</title>
-  <meta name="description" content="מחשבון משכנתא: הזינו סכום, תקופה וריבית וקבלו הערכה מיידית של ההחזר החודשי, סך הריבית והתפלגות התשלומים לאורך השנים.">
+  <title>תנאי שימוש | אלה אוזן – יועצת משכנתאות וכלכלנית</title>
+  <meta name="description" content="תנאי השימוש באתר אלה אוזן, יועצת משכנתאות וכלכלנית: אופי המידע באתר, המחשבונים, קניין רוחני והגבלת אחריות.">
   <meta name="theme-color" content="#18383A">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..800&family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="./assets/favicon-192-B3lmcI05.png">
-  <script type="module" crossorigin src="./assets/calculatorMortgage-Ce1MpFAe.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/contact-BJeJC5qV.js">
-  <link rel="modulepreload" crossorigin href="./assets/page-CvjtMPAV.js">
-  <link rel="modulepreload" crossorigin href="./assets/ui-Cg2TDYyk.js">
+  <script type="module" crossorigin src="./assets/contact-BJeJC5qV.js"></script>
+  <script type="module" crossorigin src="./assets/page-CvjtMPAV.js"></script>
+  <script type="module" crossorigin src="./assets/page-legal-CsXYrHVM.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/contact-CjEuaXjz.css">
   <link rel="stylesheet" crossorigin href="./assets/page-CejqtqGv.css">
-  <link rel="stylesheet" crossorigin href="./assets/ui-n0YMYd70.css">
+  <link rel="stylesheet" crossorigin href="./assets/page-legal-DIUew-aA.css">
 </head>
-<body class="page-calc">
+<body class="page-legal">
 
   <a class="skip-link" href="#main">דלגו לתוכן</a>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
@@ -86,132 +85,94 @@
 
   <main id="main">
 
-    <!-- ===== PAGE HERO: what the calculator does + live 3D calculator ===== -->
-    <section class="page-hero" id="top" aria-labelledby="pageTitle">
+    <section class="page-hero legal-hero" id="top" aria-labelledby="pageTitle">
       <div class="page-hero__grid-bg" aria-hidden="true"></div>
-      <div class="container page-hero__layout">
-        <div class="page-hero__copy">
-          <nav class="crumbs fade-up" aria-label="פירורי לחם">
-            <a href="index.html">דף הבית</a><span aria-hidden="true">/</span><a href="index.html#calculators">מחשבונים</a><span aria-hidden="true">/</span><span aria-current="page">מחשבון חישוב משכנתא</span>
-          </nav>
-          <h1 class="page-hero__title fade-up" id="pageTitle" style="--d: .1s">מחשבון <em>חישוב משכנתא</em></h1>
-          <p class="page-hero__lead fade-up" style="--d: .2s">כמה תשלמו בכל חודש? הזינו סכום משכנתא, תקופה וריבית, וקבלו הערכה מיידית של ההחזר החודשי, סך הריבית והתפלגות התשלומים לאורך השנים.</p>
-          <ul class="page-hero__points fade-up" style="--d: .3s">
-            <li>חישוב לפי לוח סילוקין שפיצר: החזר חודשי קבוע</li>
-            <li>רואים כמה מכל שנה הולך לקרן וכמה לריבית</li>
-            <li>הכול מחושב אצלכם בדפדפן. שום נתון לא נשלח</li>
-          </ul>
-          <div class="page-hero__ctas fade-up" style="--d: .4s">
-            <a href="#calc" class="btn btn--gold magnetic"><span class="btn__label">למחשבון</span><svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
-            <a href="#contact" class="btn btn--ghost-light"><span class="btn__label">לתיאום שיחת היכרות</span></a>
-          </div>
-        </div>
-        <div class="page-hero__stage" aria-hidden="true">
-          <div class="page-hero__glow"></div>
-          <div class="page-hero__3d" data-scene="calculator">
-            <img class="page-hero__poster scene-poster" loading="lazy" src="./assets/obj-calculator-CfLtdkYX.webp" alt="" width="896" height="1200">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== HOW IT WORKS ===== -->
-    <section class="calc-explain" aria-labelledby="explainTitle">
-      <div class="container">
-        <h2 class="section-title" id="explainTitle" data-split>שלושה נתונים, <em>תמונה אחת ברורה.</em></h2>
-        <div class="calc-explain__grid">
-          <article class="explain-card reveal">
-            <span class="explain-card__num">01</span>
-            <h3>סכום המשכנתא</h3>
-            <p>הסכום שתלוו מהבנק, אחרי ההון העצמי. זה הבסיס שעליו מחושבים ההחזר והריבית.</p>
-          </article>
-          <article class="explain-card reveal" style="--d: .08s">
-            <span class="explain-card__num">02</span>
-            <h3>תקופת ההלוואה</h3>
-            <p>ככל שהתקופה ארוכה יותר ההחזר החודשי קטן, אבל סך הריבית שתשלמו גדל.</p>
-          </article>
-          <article class="explain-card reveal" style="--d: .16s">
-            <span class="explain-card__num">03</span>
-            <h3>ריבית שנתית</h3>
-            <p>ריבית משוקללת לכל המשכנתא. בפועל המשכנתא בנויה מכמה מסלולים עם ריביות והצמדות שונות.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CALCULATOR ===== -->
-    <section class="calc-app" id="calc" aria-labelledby="calcAppTitle" data-calc="mortgage">
-      <div class="container calc-app__layout">
-
-        <form class="calc-panel calc-inputs" onsubmit="return false" aria-labelledby="calcAppTitle">
-          <h2 class="calc-panel__title" id="calcAppTitle">הנתונים שלכם</h2>
-
-          <div class="calc-field" data-field="amount">
-            <label class="calc-field__label" for="fAmount">סכום המשכנתא</label>
-            <div class="calc-field__box"><span class="calc-field__unit">₪</span><input class="calc-field__input" id="fAmount" type="text" inputmode="numeric" autocomplete="off"></div>
-            <input class="calc-field__range" type="range" min="100000" max="5000000" step="10000" value="1200000" aria-label="סכום המשכנתא">
-            <div class="calc-field__scale"><span>₪100,000</span><span>₪5,000,000</span></div>
-          </div>
-
-          <div class="calc-field" data-field="years">
-            <label class="calc-field__label" for="fYears">תקופה (שנים)</label>
-            <div class="calc-field__box"><input class="calc-field__input" id="fYears" type="text" inputmode="numeric" autocomplete="off"><span class="calc-field__unit">שנים</span></div>
-            <input class="calc-field__range" type="range" min="4" max="30" step="1" value="25" aria-label="תקופה בשנים">
-            <div class="calc-field__scale"><span>4</span><span>30</span></div>
-          </div>
-
-          <div class="calc-field" data-field="rate" data-digits="2">
-            <label class="calc-field__label" for="fRate">ריבית שנתית משוערת</label>
-            <div class="calc-field__box"><input class="calc-field__input" id="fRate" type="text" inputmode="decimal" autocomplete="off"><span class="calc-field__unit">%</span></div>
-            <input class="calc-field__range" type="range" min="1" max="9" step="0.05" value="4.5" aria-label="ריבית שנתית">
-            <div class="calc-field__scale"><span>1%</span><span>9%</span></div>
-          </div>
-
-          <p class="calc-note">הערכה בלבד ואינה מהווה ייעוץ או התחייבות. התשלום בפועל תלוי במסלולים שנבחרו, בהצמדה למדד ובתנאי הבנק.</p>
-        </form>
-
-        <div class="calc-panel calc-results" aria-live="polite">
-          <p class="calc-results__label">החזר חודשי משוער</p>
-          <p class="calc-results__big" data-out="monthly">₪0</p>
-
-          <div class="calc-results__split">
-            <div class="calc-donut" aria-hidden="true"><span class="calc-donut__interest"></span><span class="calc-donut__center" data-out="ratio">0%</span></div>
-            <dl class="calc-kv">
-              <div><dt><i class="dot dot--p"></i>קרן</dt><dd data-out="principal">₪0</dd></div>
-              <div><dt><i class="dot dot--i"></i>סך ריבית</dt><dd data-out="interest">₪0</dd></div>
-              <div class="calc-kv__total"><dt>סך כל התשלומים</dt><dd data-out="total">₪0</dd></div>
-            </dl>
-          </div>
-
-          <div class="calc-chart">
-            <div class="calc-chart__head"><span>קרן וריבית לפי שנה</span><span class="calc-legend"><i class="dot dot--p"></i>קרן <i class="dot dot--i"></i>ריבית</span></div>
-            <div class="calc-bars" role="img" aria-label="התפלגות קרן וריבית לפי שנה"></div>
-          </div>
-
-          <details class="calc-schedule">
-            <summary>לוח סילוקין שנתי</summary>
-            <div class="calc-table-wrap">
-              <table class="calc-table">
-                <thead><tr><th>שנה</th><th>קרן</th><th>ריבית</th><th>יתרה</th></tr></thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </details>
-
-          <a href="#contact" class="btn btn--gold btn--block magnetic"><span class="btn__label">רוצים אסטרטגיה פיננסית אמיתית? בואו נבנה אותה יחד</span><svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== NEXT STEP ===== -->
-    <section class="calc-next" aria-labelledby="nextTitle">
-      <div class="container calc-next__layout">
+      <div class="container legal-hero__layout">
         <div>
-          <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>המחשבון הבא</p>
-          <h2 class="section-title" id="nextTitle" data-split>כמה משכנתא <em>תוכלו לקבל?</em></h2>
-          <p class="calc-next__text fade-up">בדיקה מהירה לפי סוג הרכישה, ההון העצמי וההכנסה, כולל מחיר הדירה המרבי המשוער.</p>
+          <nav class="crumbs fade-up" aria-label="פירורי לחם">
+            <a href="index.html">דף הבית</a><span aria-hidden="true">/</span><span aria-current="page">תנאי שימוש</span>
+          </nav>
+          <p class="eyebrow eyebrow--light fade-up"><span class="eyebrow__line" aria-hidden="true"></span>מסמך משפטי</p>
+          <h1 class="page-hero__title fade-up" id="pageTitle" style="--d: .1s">תנאי שימוש. <em>כללי השימוש באתר.</em></h1>
+          <p class="page-hero__lead fade-up" style="--d: .2s">השימוש באתר כפוף לתנאים שלהלן. גלישה באתר ושימוש בו מהווים הסכמה לתנאים.</p>
+          <p class="legal-hero__meta fade-up" style="--d: .3s"><span>עודכן לאחרונה</span><time datetime="2026-09-25">25 בספטמבר 2026</time></p>
         </div>
-        <a href="calculator-eligibility.html" class="btn btn--gold magnetic fade-up"><span class="btn__label">למחשבון זכאות למשכנתא</span><svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <img class="legal-hero__obj" src="./assets/obj-folio-CBAUQKrT.webp" alt="" aria-hidden="true" width="900" height="900" data-float="10">
+      </div>
+    </section>
+
+    <section class="legal" aria-label="תנאי שימוש">
+      <div class="container legal__layout">
+        <nav class="legal-toc" aria-label="תוכן העניינים">
+          <p class="legal-toc__title">בעמוד הזה</p>
+          <ol>
+            <li><a class="legal-toc__link" href="#general"><span>01</span>כללי</a></li>
+            <li><a class="legal-toc__link" href="#info"><span>02</span>המידע באתר</a></li>
+            <li><a class="legal-toc__link" href="#calculators"><span>03</span>המחשבונים</a></li>
+            <li><a class="legal-toc__link" href="#availability"><span>04</span>זמינות האתר</a></li>
+            <li><a class="legal-toc__link" href="#ip"><span>05</span>קניין רוחני</a></li>
+            <li><a class="legal-toc__link" href="#reviews"><span>06</span>ביקורות וקישורים חיצוניים</a></li>
+            <li><a class="legal-toc__link" href="#liability"><span>07</span>הגבלת אחריות</a></li>
+            <li><a class="legal-toc__link" href="#privacy"><span>08</span>פרטיות</a></li>
+            <li><a class="legal-toc__link" href="#law"><span>09</span>דין וסמכות שיפוט</a></li>
+            <li><a class="legal-toc__link" href="#changes"><span>10</span>שינויים בתנאים</a></li>
+            <li><a class="legal-toc__link" href="#contact-us"><span>11</span>יצירת קשר</a></li>
+          </ol>
+        </nav>
+        <article class="legal-doc">
+          <section class="legal-sec" id="general" aria-labelledby="general-h">
+            <h2 id="general-h"><span class="legal-sec__num" aria-hidden="true">01</span>כללי</h2>
+          <p>האתר מופעל על ידי אלה אוזן, יועצת משכנתאות וכלכלנית. <!-- TODO: content from Ella — business name and ID --> התנאים מנוסחים בלשון רבים ופונים לכל המגדרים.</p>
+          </section>
+          <section class="legal-sec" id="info" aria-labelledby="info-h">
+            <h2 id="info-h"><span class="legal-sec__num" aria-hidden="true">02</span>המידע באתר</h2>
+          <p>המידע באתר הוא מידע כללי בלבד. הוא אינו ייעוץ פיננסי, משפטי או מיסויי אישי, ואינו התחייבות מכל סוג.</p>
+          <p>ייעוץ ניתן רק במסגרת התקשרות אישית, אחרי היכרות עם התמונה המלאה. ההחלטה לפעול לפי מידע מהאתר היא באחריותכם.</p>
+          </section>
+          <section class="legal-sec" id="calculators" aria-labelledby="calculators-h">
+            <h2 id="calculators-h"><span class="legal-sec__num" aria-hidden="true">03</span>המחשבונים</h2>
+          <p>המחשבונים באתר נותנים <strong>הערכה בלבד ואינה מהווה ייעוץ או התחייבות</strong>.</p>
+          <p>התוצאה תלויה בנתונים שהזנתם ובהנחות החישוב. התנאים בפועל נקבעים על ידי הבנקים והגופים המלווים, ועשויים להיות שונים.</p>
+          </section>
+          <section class="legal-sec" id="availability" aria-labelledby="availability-h">
+            <h2 id="availability-h"><span class="legal-sec__num" aria-hidden="true">04</span>זמינות האתר</h2>
+          <p>האתר מוצג כפי שהוא (AS IS). ייתכנו תקלות, הפסקות או טעויות, ואין התחייבות לזמינות רציפה של האתר או של שירותים חיצוניים שמשולבים בו.</p>
+          </section>
+          <section class="legal-sec" id="ip" aria-labelledby="ip-h">
+            <h2 id="ip-h"><span class="legal-sec__num" aria-hidden="true">05</span>קניין רוחני</h2>
+          <p>התכנים באתר, כולל הטקסטים, העיצוב, הלוגו, התמונות והאובייקטים הגרפיים, שייכים לאלה אוזן או לבעלי הזכויות בהם. אין להעתיק, להפיץ או לעשות בהם שימוש מסחרי בלי אישור מראש ובכתב.</p>
+          </section>
+          <section class="legal-sec" id="reviews" aria-labelledby="reviews-h">
+            <h2 id="reviews-h"><span class="legal-sec__num" aria-hidden="true">06</span>ביקורות וקישורים חיצוניים</h2>
+          <p>הביקורות מ-Google מוצגות כפי שפורסמו על ידי כותביהן, ומשקפות את דעתם האישית.</p>
+          <p>קישורים לאתרים חיצוניים ניתנים לנוחותכם. אין לי שליטה על התוכן שלהם ואין לי אחריות עליו.</p>
+          </section>
+          <section class="legal-sec" id="liability" aria-labelledby="liability-h">
+            <h2 id="liability-h"><span class="legal-sec__num" aria-hidden="true">07</span>הגבלת אחריות</h2>
+          <p>לא אהיה אחראית לנזק ישיר או עקיף שנגרם משימוש באתר או מהסתמכות על המידע שבו, במידה המרבית שהדין מתיר.</p>
+          <p>אי עמידה בפירעון הלוואה עלולה לגרור חיוב בריבית פיגורים והליכי הוצאה לפועל.</p>
+          </section>
+          <section class="legal-sec" id="privacy" aria-labelledby="privacy-h">
+            <h2 id="privacy-h"><span class="legal-sec__num" aria-hidden="true">08</span>פרטיות</h2>
+          <p>השימוש בפרטים שאתם מוסרים באתר מוסבר ב<a href="privacy.html">מדיניות הפרטיות</a>.</p>
+          </section>
+          <section class="legal-sec" id="law" aria-labelledby="law-h">
+            <h2 id="law-h"><span class="legal-sec__num" aria-hidden="true">09</span>דין וסמכות שיפוט</h2>
+          <p>על התנאים חל הדין הישראלי. סמכות השיפוט נתונה לבתי המשפט המוסמכים בישראל. <!-- TODO: legal review — specific jurisdiction --></p>
+          </section>
+          <section class="legal-sec" id="changes" aria-labelledby="changes-h">
+            <h2 id="changes-h"><span class="legal-sec__num" aria-hidden="true">10</span>שינויים בתנאים</h2>
+          <p>התנאים עשויים להתעדכן מעת לעת. הנוסח המחייב הוא זה שמופיע באתר.</p>
+          </section>
+          <section class="legal-sec" id="contact-us" aria-labelledby="contact-us-h">
+            <h2 id="contact-us-h"><span class="legal-sec__num" aria-hidden="true">11</span>יצירת קשר</h2>
+          <ul class="legal-contact">
+          <li><span>שם</span>אלה אוזן, יועצת משכנתאות וכלכלנית</li>
+          <li><span>טלפון</span><a href="tel:0542870003" dir="ltr">054-2870003</a></li>
+          <li><span>אימייל</span><a href="mailto:ellauzan1232@gmail.com" dir="ltr">ellauzan1232@gmail.com</a></li>
+        </ul>
+          </section>
+        </article>
       </div>
     </section>
 
