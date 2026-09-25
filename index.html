@@ -14,9 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..800&family=Varela+Round&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="./assets/favicon-192-B3lmcI05.png">
-  <script type="module" crossorigin src="./assets/index-Cdv4H03E.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/contact-DYLTCsRv.js">
-  <link rel="stylesheet" crossorigin href="./assets/contact-C0X_h1Vn.css">
+  <script type="module" crossorigin src="./assets/index-BZ_utfSl.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/contact-CFgZNmnZ.js">
+  <link rel="stylesheet" crossorigin href="./assets/contact-BxOQDaxF.css">
   <link rel="stylesheet" crossorigin href="./assets/index-B1x3v46w.css">
 </head>
 <body>
@@ -94,14 +94,17 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.84 3 3 8.83 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.67-1.7A12.98 12.98 0 0 0 16.02 29C23.2 29 29 23.17 29 16S23.2 3 16.02 3Zm0 23.76c-1.96 0-3.88-.53-5.56-1.52l-.4-.24-3.96 1.01 1.06-3.86-.26-.4A10.74 10.74 0 0 1 5.24 16c0-5.94 4.84-10.77 10.78-10.77 5.93 0 10.75 4.83 10.75 10.77 0 5.93-4.82 10.76-10.75 10.76Zm5.9-8.06c-.32-.16-1.91-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.22-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.8-2.22-.18-.32-.02-.5.15-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.33.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.24 1.48.21 2.03.13.62-.09 1.91-.78 2.18-1.54.27-.75.27-1.4.19-1.54-.08-.13-.29-.21-.62-.37Z"/></svg>
   </a>
 
-  <!-- First-visit notice: terms + privacy. Shown once per browser (legacy.js, localStorage "eo-terms-ok"). -->
+  <!-- First-visit notice: terms, privacy and the analytics choice. Shown until the visitor chooses (legacy.js, localStorage "eo-consent" = all | essential). -->
   <div class="site-notice" id="siteNotice" role="region" aria-label="תנאי שימוש ומדיניות פרטיות" hidden>
     <span class="site-notice__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
     <div class="site-notice__body">
       <p class="site-notice__title">רגע לפני שממשיכים</p>
-      <p class="site-notice__text">השימוש באתר כפוף ל<a href="terms.html">תנאי השימוש</a> ול<a href="privacy.html">מדיניות הפרטיות</a>. האתר אינו משתמש בעוגיות פרסום או מעקב.</p>
+      <p class="site-notice__text">השימוש באתר כפוף ל<a href="terms.html">תנאי השימוש</a> ול<a href="privacy.html">מדיניות הפרטיות</a>. באישור, האתר ישתמש גם ב-Google Analytics כדי למדוד באופן סטטיסטי איך משתמשים בו.</p>
     </div>
-    <button type="button" class="btn btn--gold btn--sm site-notice__ok" id="siteNoticeOk">אני מאשר/ת</button>
+    <div class="site-notice__actions">
+      <button type="button" class="btn btn--gold btn--sm site-notice__ok" id="siteNoticeOk">אני מאשר/ת</button>
+      <button type="button" class="site-notice__no" id="siteNoticeNo">ללא סטטיסטיקה</button>
+    </div>
   </div>
 
 
@@ -1195,6 +1198,7 @@
           <li><a href="accessibility.html">הצהרת נגישות</a></li>
           <li><a href="privacy.html">מדיניות פרטיות</a></li>
           <li><a href="terms.html">תנאי שימוש</a></li>
+          <li><button type="button" class="consent-reset">הגדרות פרטיות</button></li>
         </ul>
         <a href="#top" class="to-top" aria-label="חזרה לראש העמוד">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
