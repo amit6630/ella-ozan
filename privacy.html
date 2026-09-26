@@ -156,7 +156,7 @@
           <p class="eyebrow eyebrow--light fade-up"><span class="eyebrow__line" aria-hidden="true"></span>מסמך משפטי</p>
           <h1 class="page-hero__title fade-up" id="pageTitle" style="--d: .1s">מדיניות פרטיות. <em>הפרטים שלכם, בידיים טובות.</em></h1>
           <p class="page-hero__lead fade-up" style="--d: .2s">המסמך מסביר איזה מידע נאסף באתר, לאילו מטרות משתמשים בו ומה הזכויות שלכם, בהתאם לחוק הגנת הפרטיות, התשמ״א-1981 ולתקנות שהותקנו מכוחו.</p>
-          <p class="legal-hero__meta fade-up" style="--d: .3s"><span>עודכן לאחרונה</span><time datetime="2026-09-25">25 בספטמבר 2026</time></p>
+          <p class="legal-hero__meta fade-up" style="--d: .3s"><span>עודכן לאחרונה</span><time datetime="2026-09-26">26 בספטמבר 2026</time></p>
         </div>
         <img class="legal-hero__obj" src="./assets/obj-folio-CBAUQKrT.webp" alt="" aria-hidden="true" width="900" height="900" data-float="10">
       </div>
@@ -182,7 +182,7 @@
         <article class="legal-doc">
           <section class="legal-sec" id="general" aria-labelledby="general-h">
             <h2 id="general-h"><span class="legal-sec__num" aria-hidden="true">01</span>כללי</h2>
-          <p>האתר מופעל על ידי אלה אוזן, יועצת משכנתאות וכלכלנית (להלן: "אני" או "המשרד"). <!-- TODO: content from Ella — business name and ID (ת.ז / ע.מ / ח.פ) --></p>
+          <p>האתר מופעל על ידי אלה אוזן, יועצת משכנתאות וכלכלנית (להלן: "אני"). שם העסק: אלה אוזן יועצת משכנתאות וכלכלנית, מספר עוסק 309286722.</p>
           <p>השימוש באתר ומסירת פרטים דרכו הם מרצונכם החופשי, ואינכם חייבים על פי דין למסור מידע. בלי פרטי התקשרות לא אוכל לחזור אליכם.</p>
           <p>המסמך מנוסח בלשון רבים ופונה לכל המגדרים.</p>
           </section>
@@ -204,7 +204,7 @@
             <li>לתת לכם שירות ייעוץ וליווי, אם תבחרו בכך.</li>
             <li>לעמוד בדרישות הדין.</li>
           </ul>
-          <p>לא אשתמש בפרטים שלכם לדיוור שיווקי בלי הסכמה נפרדת ומפורשת.</p>
+          <p><strong>דיוור:</strong> עדכונים, טיפים וניוזלטר יישלחו רק למי שסימן/ה בטופס את תיבת ההסכמה הנפרדת לדיוור. התיבה אינה מסומנת מראש, ואינה תנאי לקבלת מענה. כל דיוור יכלול אפשרות להסרה, ואפשר גם לבקש הסרה בכל עת בפנייה אליי.</p>
           </section>
           <section class="legal-sec" id="sharing" aria-labelledby="sharing-h">
             <h2 id="sharing-h"><span class="legal-sec__num" aria-hidden="true">04</span>העברת מידע לאחרים</h2>
@@ -215,6 +215,7 @@
             <li><strong>במסגרת ליווי בפועל</strong> יועבר מידע לבנקים ולגופים מלווים רק בהסכמתכם ולצורך הטיפול בתיק.</li>
             <li>לא אמכור ולא אשכיר את המידע שלכם. מידע יימסר לרשויות רק אם הדין מחייב זאת.</li>
           </ul>
+          <p>חלק מהשירותים החיצוניים שצוינו, כמו Web3Forms ו-Google, שומרים ומעבדים מידע בשרתים מחוץ לישראל, בהתאם למדיניות הפרטיות שלהם.</p>
           </section>
           <section class="legal-sec" id="cookies" aria-labelledby="cookies-h">
             <h2 id="cookies-h"><span class="legal-sec__num" aria-hidden="true">05</span>עוגיות, סטטיסטיקה וקישורים חיצוניים</h2>
@@ -339,6 +340,13 @@
             <span class="consent__box" aria-hidden="true"></span>
             <span class="consent__text">קראתי ואני מסכים/ה ל<a href="terms.html" target="_blank" rel="noopener">תנאי השימוש</a> ול<a href="privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>, ומאשר/ת יצירת קשר בנוגע לפנייה זו</span>
             <span class="field__error consent__error" role="alert"></span>
+          </label>
+
+          <!-- optional marketing consent (Israeli anti-spam law: separate, unchecked by default) -->
+          <label class="consent">
+            <input type="checkbox" name="newsletter" id="fNewsletter" value="כן">
+            <span class="consent__box" aria-hidden="true"></span>
+            <span class="consent__text">אשמח לקבל עדכונים, טיפים ודיוור מאלה אוזן (לא חובה, אפשר להסיר בכל עת)</span>
           </label>
 
           <button type="submit" class="btn btn--gold btn--block magnetic">
