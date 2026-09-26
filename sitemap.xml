@@ -49,6 +49,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://ellaozan-mashkanta.co.il/articles.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ellaozan-mashkanta.co.il/article-when-to-refinance.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ellaozan-mashkanta.co.il/article-bank-refusal.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ellaozan-mashkanta.co.il/article-down-payment.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ellaozan-mashkanta.co.il/about.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -71,6 +95,12 @@
     <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ellaozan-mashkanta.co.il/card.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ellaozan-mashkanta.co.il/accessibility.html</loc>
