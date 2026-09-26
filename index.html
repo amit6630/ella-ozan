@@ -137,11 +137,12 @@
     ]
   }
   </script>
-  <script type="module" crossorigin src="./assets/index-DlIeckeO.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/contact-BPx_5ap1.js">
-  <link rel="modulepreload" crossorigin href="./assets/faq-CNa7CaHj.js">
-  <link rel="stylesheet" crossorigin href="./assets/contact-Ck7r5KJ7.css">
+  <script type="module" crossorigin src="./assets/index-CPdc_AeV.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/contact-B5cYyjF1.js">
+  <link rel="modulepreload" crossorigin href="./assets/faq-B97iiwNc.js">
+  <link rel="stylesheet" crossorigin href="./assets/contact-D8Gh8eYU.css">
   <link rel="stylesheet" crossorigin href="./assets/index-wrGTw6yd.css">
+  <script>try { var a = JSON.parse(localStorage.getItem('eo-a11y') || '{}') || {}, h = document.documentElement, z = [1, 1.1, 1.2, 1.35, 1.5][a.zoom || 0] || 1; ['contrast', 'gray', 'links', 'headings', 'font', 'spacing', 'motion', 'cursor'].forEach(function (k) { if (a[k]) h.classList.add('a11y-' + k); }); if (z !== 1) { h.classList.add('a11y-zoom'); h.style.setProperty('--a11y-zoom', z); } } catch (e) {}</script>
   <script>if (/\.github\.io$/.test(location.hostname)) { var r = document.createElement('meta'); r.name = 'robots'; r.content = 'noindex'; document.head.appendChild(r); }</script>
   <link rel="canonical" href="https://ellaozan-mashkanta.co.il/">
   <meta property="og:type" content="website">
@@ -200,7 +201,6 @@
               <li><a class="main-nav__sublink" href="calculator-eligibility.html"><span class="main-nav__sublink-title">מחשבון זכאות למשכנתא</span><span class="main-nav__sublink-desc">כמה משכנתא תוכלו לקבל</span></a></li>
             </ul>
           </li>
-          <li><a class="main-nav__link" href="#knowledge">מרכז ידע</a></li>
           <li><a class="main-nav__link" href="contact.html">צור קשר</a></li>
         </ul>
         <div class="main-nav__mobile-foot">
@@ -210,11 +210,6 @@
       </nav>
 
       <div class="site-header__actions">
-        <div class="lang-toggle" role="group" aria-label="בחירת שפה">
-          <button type="button" class="lang-toggle__btn is-active" aria-pressed="true" lang="he">HE</button>
-          <span class="lang-toggle__sep" aria-hidden="true">|</span>
-          <button type="button" class="lang-toggle__btn" aria-pressed="false" aria-disabled="true" disabled lang="ru" title="בקרוב">RU</button>
-        </div>
         <a href="#contact" class="btn btn--gold btn--sm magnetic">
           <span class="btn__label">לשיחת ייעוץ</span>
           <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
@@ -244,6 +239,44 @@
       <button type="button" class="site-notice__no" id="siteNoticeNo">ללא סטטיסטיקה</button>
     </div>
   </div>
+
+    <!-- Accessibility menu (built in-house, no third-party overlay). Logic: src/js/a11y.js,
+       styles: src/css/a11y.css, early apply: seoHead() in vite.config.js (localStorage "eo-a11y"). -->
+  <div class="a11y" id="a11y">
+    <button type="button" class="a11y__toggle" id="a11yToggle" aria-expanded="false" aria-controls="a11yPanel" aria-label="תפריט נגישות">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8.5c2.7.9 5.3 1.3 8 1.3s5.3-.4 8-1.3M12 9.8V15m0 0-3.2 6.5M12 15l3.2 6.5"/></svg>
+    </button>
+    <div class="a11y__panel" id="a11yPanel" role="dialog" aria-modal="false" aria-labelledby="a11yTitle" hidden>
+      <div class="a11y__head">
+        <p class="a11y__title" id="a11yTitle">תפריט נגישות</p>
+        <button type="button" class="a11y__close" id="a11yClose" aria-label="סגירת תפריט הנגישות"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+
+      <div class="a11y__size" role="group" aria-labelledby="a11ySizeLabel">
+        <span class="a11y__size-label" id="a11ySizeLabel">גודל טקסט</span>
+        <button type="button" class="a11y__step" data-a11y-zoom="-1" aria-label="הקטנת טקסט">א−</button>
+        <output class="a11y__size-value" id="a11yZoomValue" aria-live="polite">100%</output>
+        <button type="button" class="a11y__step" data-a11y-zoom="1" aria-label="הגדלת טקסט">א+</button>
+      </div>
+
+      <div class="a11y__grid">
+        <button type="button" class="a11y__opt" data-a11y="contrast" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18Z" class="fill"/></svg><span>ניגודיות גבוהה</span></button>
+        <button type="button" class="a11y__opt" data-a11y="gray" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 10.5a6 6 0 0 1-12 0C6 9.4 12 3 12 3Z"/></svg><span>גווני אפור</span></button>
+        <button type="button" class="a11y__opt" data-a11y="links" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>הדגשת קישורים</span></button>
+        <button type="button" class="a11y__opt" data-a11y="headings" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14M13 5v14M5 12h8M17 9l2-1v11"/></svg><span>הדגשת כותרות</span></button>
+        <button type="button" class="a11y__opt" data-a11y="font" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 10 5l6 14M6.5 14h7M17 19h4"/></svg><span>גופן קריא</span></button>
+        <button type="button" class="a11y__opt" data-a11y="spacing" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>ריווח טקסט</span></button>
+        <button type="button" class="a11y__opt" data-a11y="motion" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span>עצירת אנימציות</span></button>
+        <button type="button" class="a11y__opt" data-a11y="cursor" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 7-6 2-2 6Z"/></svg><span>סמן עכבר גדול</span></button>
+      </div>
+
+      <div class="a11y__foot">
+        <button type="button" class="a11y__reset" id="a11yReset">איפוס הגדרות</button>
+        <a class="a11y__statement" href="accessibility.html">הצהרת נגישות</a>
+      </div>
+    </div>
+  </div>
+
 
 
   <main id="main">
@@ -284,6 +317,13 @@
             <span class="btn__label">למחשבון משכנתא</span>
           </a>
         </div>
+
+        <!-- trust line: live Google rating + credentials (facts from Ella's profiles) -->
+        <ul class="hero__trust fade-up" style="--d: .7s">
+          <li><a href="https://maps.google.com/?cid=5443482476635220296" target="_blank" rel="noopener"><span class="hero__trust-stars" aria-hidden="true">★★★★★</span><strong>5.0</strong> ב-Google · 18 ביקורות</a></li>
+          <li>כלכלנית</li>
+          <li><a href="https://hfca.org.il/userprofile/?id=2083" target="_blank" rel="noopener">חברה בהתאחדות יועצי המשכנתאות</a></li>
+        </ul>
       </div>
 
       <!-- 3D stage: residential tower drawn in gold, then built floor by floor (Three.js) -->
@@ -400,7 +440,7 @@
         <div class="services-grid-12">
 
           <!-- Card 1: pen and paper -->
-          <div class="service-card card-span-4 reveal" style="--d: 0.00s">
+          <a href="mortgage-refinance.html" class="service-card card-span-4 reveal" style="--d: 0.00s">
             <span class="service-card__num" aria-hidden="true">01</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-pen-paper" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -416,10 +456,11 @@
             <p class="service-card-text">
               בחינת המשכנתה הקיימת והתאמתה למציאות הכלכלית החדשה שלכם, לשם חיסכון של עשרות ומאות אלפי שקלים.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
 
           <!-- Card 2: handshake -->
-          <div class="service-card card-span-4 reveal" style="--d: 0.06s">
+          <a href="loan-consolidation.html" class="service-card card-span-4 reveal" style="--d: 0.06s">
             <span class="service-card__num" aria-hidden="true">02</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -435,10 +476,11 @@
               ריכוז הלוואות קצרות מפוזרות לתוך המשכנתה בפריסה נוחה, להפחתה משמעותית בהחזר החודשי ויציאה לדרך
               חדשה.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
 
           <!-- Card 3: briefcase -->
-          <div class="service-card card-span-4 reveal" style="--d: 0.12s">
+          <a href="home-purchase-mortgage.html" class="service-card card-span-4 reveal" style="--d: 0.12s">
             <span class="service-card__num" aria-hidden="true">03</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -451,10 +493,11 @@
             <p class="service-card-text">
               בניית אסטרטגיה פיננסית ומשכנתא מותאמת, ניהול המכרז מול הבנקים והשגת תנאים וריביות מנצחות מעמדת כוח.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
 
           <!-- Card 4: credit shield -->
-          <div class="service-card card-span-3 reveal" style="--d: 0.18s">
+          <a href="bank-refusal-mortgage.html" class="service-card card-span-3 reveal" style="--d: 0.18s">
             <span class="service-card__num" aria-hidden="true">04</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -468,10 +511,11 @@
               טיפול ממוקד במצבי אשראי מורכבים ומסורבי בנקים, בניית אסטרטגיה לשיקום אשראי ועבודה ישירה מול
               דרגים בכירים.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
 
           <!-- Card 5: strategic consulting & mediation -->
-          <div class="service-card card-span-3 reveal" style="--d: 0.24s">
+          <a href="services.html#strategy" class="service-card card-span-3 reveal" style="--d: 0.24s">
             <span class="service-card__num" aria-hidden="true">05</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -486,10 +530,11 @@
               ניהול שיח מקצועי מול גורמי המימון והבנקים, מתוך מטרה להגיע להסכמות ופתרונות יצירתיים ללא
               חיכוכים.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
 
           <!-- Card 6: self-build -->
-          <div class="service-card card-span-3 reveal" style="--d: 0.30s">
+          <a href="self-build-mortgage.html" class="service-card card-span-3 reveal" style="--d: 0.30s">
             <span class="service-card__num" aria-hidden="true">06</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-construction" viewBox="0 0 24 24" fill="none"
@@ -504,10 +549,11 @@
             <p class="service-card-text">
               תכנון וניהול שלבי שחרור הכספים מול הבנק בהתאם לקצב הבנייה, לשמירה על התקציב והתזרים.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
 
           <!-- Card 7: reverse mortgage -->
-          <div class="service-card card-span-3 reveal" style="--d: 0.36s">
+          <a href="reverse-mortgage.html" class="service-card card-span-3 reveal" style="--d: 0.36s">
             <span class="service-card__num" aria-hidden="true">07</span>
             <div class="service-icon-wrapper">
               <svg class="service-icon icon-reverse-mortgage" viewBox="0 0 24 24" fill="none"
@@ -521,7 +567,8 @@
             <p class="service-card-text">
               מימוש ההון הקיים בנכס לכל מטרה או עזרה לילדים, בביטחון מלא וללא חובת החזרים חודשיים שוטפים.
             </p>
-          </div>
+            <span class="service-card__more">לפרטים<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+          </a>
         </div>
 
         <p class="services-swipe-hint" aria-hidden="true">החליקו לכל שבעת התחומים</p>
@@ -535,165 +582,6 @@
             <span class="btn__label">לתיאום שיחת ייעוץ</span>
             <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
           </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =====================================================
-         5. PROCESS – מהחלום ועד למפתח (from "Website i created")
-         ===================================================== -->
-    <section id="process" class="process-section" aria-labelledby="processTitle">
-      <div class="container process-pin">
-
-        <div class="process-header">
-          <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>התהליך</p>
-          <h2 class="process-title" id="processTitle" data-split>מהחלום <em>ועד למפתח</em></h2>
-          <p class="process-description fade-up">
-            תהליך הליווי נבנה כדי להפוך אתגרים פיננסיים מורכבים למסלול ברור, בטוח ומנוהל.
-          </p>
-        </div>
-
-        <div class="process-stage">
-          <!-- 3D gold key: turns in the lock as the steps progress -->
-          <div class="process-key" aria-hidden="true">
-            <div class="process-key__glow"></div>
-            <div class="process-key__3d" data-key-3d>
-              <img class="process-key__poster scene-poster" src="./assets/obj-key-CBS363_U.webp" alt="" width="900" height="900" loading="lazy">
-            </div>
-          </div>
-
-          <div class="process-track">
-            <div class="process-rail" aria-hidden="true"><span class="process-rail__fill"></span></div>
-            <ol class="process-steps">
-              <li class="process-step">
-                <span class="process-step__num">01</span>
-                <div class="process-step__body">
-                  <h3 class="process-step__title">אבחון פיננסי וזיהוי החסמים</h3>
-                  <p class="process-step__text">ניתוח עומק של התמונה הכלכלית המלאה וזיהוי החסם האמיתי — כי לפעמים הבעיה היא לא המשכנתה, אלא הדרך שבה מסתכלים עליה.</p>
-                </div>
-              </li>
-              <li class="process-step">
-                <span class="process-step__num">02</span>
-                <div class="process-step__body">
-                  <h3 class="process-step__title">בניית אסטרטגיית מימון</h3>
-                  <p class="process-step__text">תכנון אסטרטגיה פיננסית חכמה ופתרונות אשראי המותאמים במדויק לאדם, למשפחה ולמטרות שלכם, גם בתיקים מורכבים ומאתגרים.</p>
-                </div>
-              </li>
-              <li class="process-step">
-                <span class="process-step__num">03</span>
-                <div class="process-step__body">
-                  <h3 class="process-step__title">משא ומתן מול הבנקים</h3>
-                  <p class="process-step__text">ניהול מו"מ מקצועי ונחוש מול המערכת הבנקאית ומחלקות התיקים המורכבים להשגת האישורים, התנאים והריביות הטובות ביותר.</p>
-                </div>
-              </li>
-              <li class="process-step">
-                <span class="process-step__num">04</span>
-                <div class="process-step__body">
-                  <h3 class="process-step__title">ליווי עד לקבלת המפתח</h3>
-                  <p class="process-step__text">ממשיכים יחד עד לחתימה הרשמית וקבלת המפתח, לצד הסבר פשוט ובהיר שיוודא שאתם מרגישים בטוחים גם בהמשך הדרך.</p>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =====================================================
-         6. AUTHORITY & PROFESSIONAL BACKGROUND
-         Four framed credential cards (each with its own counter)
-         beside one framed panel with the pen, Ella's quote and a drawn signature.
-         ===================================================== -->
-    <section class="authority" id="authority" aria-labelledby="authorityTitle">
-      <div class="container">
-
-        <header class="authority__header">
-          <div>
-            <p class="eyebrow eyebrow--light fade-up"><span class="eyebrow__line" aria-hidden="true"></span>סמכות ורקע מקצועי</p>
-            <h2 class="authority__title" id="authorityTitle" data-split>ידע אקדמי. <em>ניסיון בהובלת אנשים.</em></h2>
-          </div>
-          <p class="authority__subtitle fade-up">השכלה בכלכלה, בחינוך ובמנהל ומדיניות ציבורית, הכשרות מקצועיות וחברות בגופי המקצוע.</p>
-        </header>
-
-        <div class="authority__main">
-          <div class="auth-cards">
-            <article class="auth-card spotlight">
-              <span class="auth-card__corner" aria-hidden="true"></span>
-              <header class="auth-card__head">
-                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z" pathLength="1"/><path d="M6 12v5c0 2 6 2 6 2s6 0 6-2v-5M22 10v6" pathLength="1"/></svg></span>
-                <h3 class="auth-card__title">השכלה אקדמית</h3>
-                <p class="auth-card__stat"><span class="count" data-count="3">3</span><small>תארים</small></p>
-              </header>
-              <ul class="auth-degrees">
-                <li><span class="auth-degrees__field">כלכלה</span><span class="auth-degrees__level">תואר ראשון</span></li>
-                <li><span class="auth-degrees__field">חינוך</span><span class="auth-degrees__level">תואר ראשון</span></li>
-                <li><span class="auth-degrees__field">מנהל ומדיניות ציבורית</span><span class="auth-degrees__level">תואר שני</span></li>
-              </ul>
-            </article>
-
-            <article class="auth-card spotlight">
-              <span class="auth-card__corner" aria-hidden="true"></span>
-              <header class="auth-card__head">
-                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6" pathLength="1"/><path d="M15.5 12.9 17 22l-5-3-5 3 1.5-9.1" pathLength="1"/></svg></span>
-                <h3 class="auth-card__title">הכשרות מקצועיות</h3>
-                <p class="auth-card__stat"><span class="count" data-count="5">5</span><small>תחומים</small></p>
-              </header>
-              <ul class="auth-chips">
-                <li>ייעוץ משכנתאות</li>
-                <li>מימון ותיקים מורכבים</li>
-                <li>דירוג אשראי</li>
-                <li>יזמות נדל״ן</li>
-                <li>מיסוי מקרקעין</li>
-              </ul>
-            </article>
-
-            <article class="auth-card spotlight">
-              <span class="auth-card__corner" aria-hidden="true"></span>
-              <header class="auth-card__head">
-                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4" pathLength="1"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" pathLength="1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9" pathLength="1"/></svg></span>
-                <h3 class="auth-card__title">חברות מקצועית</h3>
-                <p class="auth-card__stat"><span class="count" data-count="2">2</span><small>גופי מקצוע</small></p>
-              </header>
-              <ul class="auth-items">
-                <li><strong>התאחדות יועצי המשכנתאות</strong><a class="auth-link" href="https://hfca.org.il/userprofile/?id=2083" target="_blank" rel="noopener">לפרופיל שלי בהתאחדות<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></li>
-                <li><strong>קבוצת סיירת יועצים</strong><span>מתמחה בתיקים מורכבים ובקשר מקצועי עם מחלקות התיקים המורכבים בבנקים.</span></li>
-              </ul>
-            </article>
-
-            <article class="auth-card spotlight">
-              <span class="auth-card__corner" aria-hidden="true"></span>
-              <header class="auth-card__head">
-                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13" pathLength="1"/><path d="M9 21v-6h6v6" pathLength="1"/></svg></span>
-                <h3 class="auth-card__title">ניסיון</h3>
-                <p class="auth-card__stat"><span class="auth-card__pre">כ־</span><span class="count" data-count="20">20</span><small>שנות חינוך וניהול</small></p>
-              </header>
-              <ul class="auth-items">
-                <li><strong>כלכלה ובנקאות</strong><span>עבודה בבנק והיכרות מקרוב עם האופן שבו מתקבלות החלטות אשראי.</span></li>
-                <li><strong>חינוך וניהול</strong><span>כ־20 שנה בהוראה ובניהול, עד לתפקיד ניהולי בתחום החינוך.</span></li>
-              </ul>
-            </article>
-          </div>
-
-          <aside class="auth-panel" aria-label="אלה אוזן על הגישה שלה">
-            <span class="auth-panel__corner auth-panel__corner--a" aria-hidden="true"></span>
-            <span class="auth-panel__corner auth-panel__corner--b" aria-hidden="true"></span>
-            <div class="auth-panel__stage" aria-hidden="true">
-              <div class="auth-panel__glow"></div>
-              <svg class="auth-panel__orbit" viewBox="0 0 200 200"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="70"/><circle class="auth-panel__spark" cx="100" cy="8" r="3"/></svg>
-              <img class="auth-panel__pen" src="./assets/obj-pen-B9OKAtz6.webp" alt="" width="900" height="900" loading="lazy">
-            </div>
-            <blockquote class="auth-panel__quote">
-              <svg class="auth-panel__mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M20 0H8C3.6 0 0 3.6 0 8v12h14c0 5.5-4.5 10-10 10v6c9 0 16-7.2 16-16V0Zm28 0H36c-4.4 0-8 3.6-8 8v12h14c0 5.5-4.5 10-10 10v6c9 0 16-7.2 16-16V0Z"/></svg>
-              <p class="auth-panel__text">הכלכלה לימדה אותי לנתח, לשאול שאלות ולראות את התמונה הפיננסית. <em>החינוך לימד אותי להבין אנשים, להקשיב, לפשט מורכב וללוות תהליכים.</em></p>
-              <footer class="auth-panel__sign">
-                <svg class="auth-panel__signature" viewBox="0 0 220 44" aria-hidden="true"><path d="M214 30 C 196 8, 180 40, 162 24 S 134 6, 120 28 C 110 42, 100 16, 88 22 C 74 30, 72 40, 58 34 C 42 26, 38 12, 24 20 S 10 36, 4 30" pathLength="1"/></svg>
-                <span>אלה אוזן</span>
-              </footer>
-            </blockquote>
-            <a href="about.html" class="auth-panel__cta"><span>לסיפור המלא שלי</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
-          </aside>
         </div>
 
       </div>
@@ -920,6 +808,165 @@
     </section>
 
     <!-- =====================================================
+         6. AUTHORITY & PROFESSIONAL BACKGROUND
+         Four framed credential cards (each with its own counter)
+         beside one framed panel with the pen, Ella's quote and a drawn signature.
+         ===================================================== -->
+    <section class="authority" id="authority" aria-labelledby="authorityTitle">
+      <div class="container">
+
+        <header class="authority__header">
+          <div>
+            <p class="eyebrow eyebrow--light fade-up"><span class="eyebrow__line" aria-hidden="true"></span>סמכות ורקע מקצועי</p>
+            <h2 class="authority__title" id="authorityTitle" data-split>ידע אקדמי. <em>ניסיון בהובלת אנשים.</em></h2>
+          </div>
+          <p class="authority__subtitle fade-up">השכלה בכלכלה, בחינוך ובמנהל ומדיניות ציבורית, הכשרות מקצועיות וחברות בגופי המקצוע.</p>
+        </header>
+
+        <div class="authority__main">
+          <div class="auth-cards">
+            <article class="auth-card spotlight">
+              <span class="auth-card__corner" aria-hidden="true"></span>
+              <header class="auth-card__head">
+                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z" pathLength="1"/><path d="M6 12v5c0 2 6 2 6 2s6 0 6-2v-5M22 10v6" pathLength="1"/></svg></span>
+                <h3 class="auth-card__title">השכלה אקדמית</h3>
+                <p class="auth-card__stat"><span class="count" data-count="3">3</span><small>תארים</small></p>
+              </header>
+              <ul class="auth-degrees">
+                <li><span class="auth-degrees__field">כלכלה</span><span class="auth-degrees__level">תואר ראשון</span></li>
+                <li><span class="auth-degrees__field">חינוך</span><span class="auth-degrees__level">תואר ראשון</span></li>
+                <li><span class="auth-degrees__field">מנהל ומדיניות ציבורית</span><span class="auth-degrees__level">תואר שני</span></li>
+              </ul>
+            </article>
+
+            <article class="auth-card spotlight">
+              <span class="auth-card__corner" aria-hidden="true"></span>
+              <header class="auth-card__head">
+                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6" pathLength="1"/><path d="M15.5 12.9 17 22l-5-3-5 3 1.5-9.1" pathLength="1"/></svg></span>
+                <h3 class="auth-card__title">הכשרות מקצועיות</h3>
+                <p class="auth-card__stat"><span class="count" data-count="5">5</span><small>תחומים</small></p>
+              </header>
+              <ul class="auth-chips">
+                <li>ייעוץ משכנתאות</li>
+                <li>מימון ותיקים מורכבים</li>
+                <li>דירוג אשראי</li>
+                <li>יזמות נדל״ן</li>
+                <li>מיסוי מקרקעין</li>
+              </ul>
+            </article>
+
+            <article class="auth-card spotlight">
+              <span class="auth-card__corner" aria-hidden="true"></span>
+              <header class="auth-card__head">
+                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4" pathLength="1"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" pathLength="1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9" pathLength="1"/></svg></span>
+                <h3 class="auth-card__title">חברות מקצועית</h3>
+                <p class="auth-card__stat"><span class="count" data-count="2">2</span><small>גופי מקצוע</small></p>
+              </header>
+              <ul class="auth-items">
+                <li><strong>התאחדות יועצי המשכנתאות</strong><a class="auth-link" href="https://hfca.org.il/userprofile/?id=2083" target="_blank" rel="noopener">לפרופיל שלי בהתאחדות<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></li>
+                <li><strong>קבוצת סיירת יועצים</strong><span>מתמחה בתיקים מורכבים ובקשר מקצועי עם מחלקות התיקים המורכבים בבנקים.</span></li>
+              </ul>
+            </article>
+
+            <article class="auth-card spotlight">
+              <span class="auth-card__corner" aria-hidden="true"></span>
+              <header class="auth-card__head">
+                <span class="auth-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13" pathLength="1"/><path d="M9 21v-6h6v6" pathLength="1"/></svg></span>
+                <h3 class="auth-card__title">ניסיון</h3>
+                <p class="auth-card__stat"><span class="auth-card__pre">כ־</span><span class="count" data-count="20">20</span><small>שנות חינוך וניהול</small></p>
+              </header>
+              <ul class="auth-items">
+                <li><strong>כלכלה ובנקאות</strong><span>עבודה בבנק והיכרות מקרוב עם האופן שבו מתקבלות החלטות אשראי.</span></li>
+                <li><strong>חינוך וניהול</strong><span>כ־20 שנה בהוראה ובניהול, עד לתפקיד ניהולי בתחום החינוך.</span></li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="auth-panel" aria-label="אלה אוזן על הגישה שלה">
+            <span class="auth-panel__corner auth-panel__corner--a" aria-hidden="true"></span>
+            <span class="auth-panel__corner auth-panel__corner--b" aria-hidden="true"></span>
+            <div class="auth-panel__stage" aria-hidden="true">
+              <div class="auth-panel__glow"></div>
+              <svg class="auth-panel__orbit" viewBox="0 0 200 200"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="70"/><circle class="auth-panel__spark" cx="100" cy="8" r="3"/></svg>
+              <img class="auth-panel__pen" src="./assets/obj-pen-B9OKAtz6.webp" alt="" width="900" height="900" loading="lazy">
+            </div>
+            <blockquote class="auth-panel__quote">
+              <svg class="auth-panel__mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M20 0H8C3.6 0 0 3.6 0 8v12h14c0 5.5-4.5 10-10 10v6c9 0 16-7.2 16-16V0Zm28 0H36c-4.4 0-8 3.6-8 8v12h14c0 5.5-4.5 10-10 10v6c9 0 16-7.2 16-16V0Z"/></svg>
+              <p class="auth-panel__text">הכלכלה לימדה אותי לנתח, לשאול שאלות ולראות את התמונה הפיננסית. <em>החינוך לימד אותי להבין אנשים, להקשיב, לפשט מורכב וללוות תהליכים.</em></p>
+              <footer class="auth-panel__sign">
+                <svg class="auth-panel__signature" viewBox="0 0 220 44" aria-hidden="true"><path d="M214 30 C 196 8, 180 40, 162 24 S 134 6, 120 28 C 110 42, 100 16, 88 22 C 74 30, 72 40, 58 34 C 42 26, 38 12, 24 20 S 10 36, 4 30" pathLength="1"/></svg>
+                <span>אלה אוזן</span>
+              </footer>
+            </blockquote>
+            <a href="about.html" class="auth-panel__cta"><span>לסיפור המלא שלי</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         5. PROCESS – מהחלום ועד למפתח (from "Website i created")
+         ===================================================== -->
+    <section id="process" class="process-section" aria-labelledby="processTitle">
+      <div class="container process-pin">
+
+        <div class="process-header">
+          <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>התהליך</p>
+          <h2 class="process-title" id="processTitle" data-split>מהשיחה הראשונה <em>ועד החתימה</em></h2>
+          <p class="process-description fade-up">
+            תהליך הליווי נבנה כדי להפוך אתגרים פיננסיים מורכבים למסלול ברור, בטוח ומנוהל.
+          </p>
+        </div>
+
+        <div class="process-stage">
+          <!-- 3D gold key: turns in the lock as the steps progress -->
+          <div class="process-key" aria-hidden="true">
+            <div class="process-key__glow"></div>
+            <div class="process-key__3d" data-key-3d>
+              <img class="process-key__poster scene-poster" src="./assets/obj-key-CBS363_U.webp" alt="" width="900" height="900" loading="lazy">
+            </div>
+          </div>
+
+          <div class="process-track">
+            <div class="process-rail" aria-hidden="true"><span class="process-rail__fill"></span></div>
+            <ol class="process-steps">
+              <li class="process-step">
+                <span class="process-step__num">01</span>
+                <div class="process-step__body">
+                  <h3 class="process-step__title">אבחון פיננסי וזיהוי החסמים</h3>
+                  <p class="process-step__text">ניתוח עומק של התמונה הכלכלית המלאה וזיהוי החסם האמיתי — כי לפעמים הבעיה היא לא המשכנתה, אלא הדרך שבה מסתכלים עליה.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <span class="process-step__num">02</span>
+                <div class="process-step__body">
+                  <h3 class="process-step__title">בניית אסטרטגיית מימון</h3>
+                  <p class="process-step__text">תכנון אסטרטגיה פיננסית חכמה ופתרונות אשראי המותאמים במדויק לאדם, למשפחה ולמטרות שלכם, גם בתיקים מורכבים ומאתגרים.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <span class="process-step__num">03</span>
+                <div class="process-step__body">
+                  <h3 class="process-step__title">משא ומתן מול הבנקים</h3>
+                  <p class="process-step__text">ניהול מו"מ מקצועי ונחוש מול המערכת הבנקאית ומחלקות התיקים המורכבים להשגת האישורים, התנאים והריביות הטובות ביותר.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <span class="process-step__num">04</span>
+                <div class="process-step__body">
+                  <h3 class="process-step__title">ליווי עד לקבלת המפתח</h3>
+                  <p class="process-step__text">ממשיכים יחד עד לחתימה הרשמית וקבלת המפתח, לצד הסבר פשוט ובהיר שיוודא שאתם מרגישים בטוחים גם בהמשך הדרך.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
          7. CALCULATORS TEASER
          ===================================================== -->
     <section class="calculators section" id="calculators" aria-labelledby="calcTitle">
@@ -953,7 +1000,7 @@
               <div class="mock-slider"><span style="--v: 70%"></span></div>
               <div class="mock-result">
                 <span class="mock-result__label">החזר חודשי משוער</span>
-                <span class="mock-result__value">₪<span class="count" data-count="6420" data-format="1">0</span></span>
+                <span class="mock-result__value">₪<span class="count" data-count="6670" data-format="1">0</span></span>
               </div>
             </div>
             <span class="calc-card__cta">
@@ -995,79 +1042,46 @@
     </section>
 
     <!-- =====================================================
-         8. KNOWLEDGE CENTER
+         10. FAQ
+         TODO: answers are a draft for Ella's approval.
          ===================================================== -->
-    <section class="knowledge section" id="knowledge" aria-labelledby="knowledgeTitle">
-      <div class="container">
-        <header class="section-head">
-          <div class="section-head__text">
-            <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>מרכז ידע</p>
-            <h2 class="section-title" id="knowledgeTitle" data-split>ידע שמחזיר לכם את השליטה.</h2>
-          </div>
-          <a href="articles.html" class="link-arrow section-head__aside fade-up">
-            <span>לכל המאמרים</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    <section class="faq section has-marble" id="faq" aria-labelledby="faqTitle">
+      <div class="container faq__layout">
+        <div class="faq__intro">
+          <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>שאלות נפוצות</p>
+          <h2 class="section-title" id="faqTitle" data-split>יש לכם שאלות? <em>ריכזנו תשובות.</em></h2>
+          <p class="faq__lead fade-up">לא מצאתם את מה שחיפשתם? אפשר לשאול אותי ישירות.</p>
+          <a href="https://wa.me/972542870003" class="btn btn--gold btn--sm magnetic fade-up" target="_blank" rel="noopener">
+            <span class="btn__label">שאלה ב-WhatsApp</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
           </a>
-        </header>
+        </div>
 
-        <div class="articles">
-          <article class="article article--featured reveal">
-            <a href="articles/bank-refusal.html" class="article__link">
-              <div class="article__media">
-                <img src="./assets/house-exterior-D9Q1DPCu.webp" alt="" loading="lazy" data-zoom>
-                <span class="article__badge">מאמר מוביל</span>
-              </div>
-              <div class="article__body">
-                <div class="article__meta">
-                  <span class="article__cat">מסורבי בנקים</span>
-                  <span class="article__dot" aria-hidden="true"></span>
-                  <span class="article__time">6 דקות קריאה</span>
-                </div>
-                <h3 class="article__title">כשבנק אומר "לא": החסם האמיתי שמאחורי הסירוב (ואיך עוקפים אותו)</h3>
-                <p class="article__excerpt">סירוב בנקאי הוא כמעט אף פעם לא סיפור על הכנסה בלבד. מה הבנק באמת רואה בתיק שלכם, ואיך הופכים את ה"לא" לתוכנית פעולה.</p>
-                <span class="article__read">
-                  <span>לקריאת המאמר</span>
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-                </span>
-              </div>
-            </a>
-          </article>
-
-          <article class="article article--secondary reveal" style="--d: .1s">
-            <a href="articles/loan-consolidation.html" class="article__link">
-              <span class="article__index" aria-hidden="true">02</span>
-              <div class="article__body">
-                <div class="article__meta">
-                  <span class="article__cat">איחוד הלוואות</span>
-                  <span class="article__dot" aria-hidden="true"></span>
-                  <span class="article__time">5 דקות קריאה</span>
-                </div>
-                <h3 class="article__title">איחוד הלוואות: איך להפוך מחנק חודשי לחיסכון של מאות שקלים</h3>
-                <span class="article__read">
-                  <span>לקריאה</span>
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-                </span>
-              </div>
-            </a>
-          </article>
-
-          <article class="article article--secondary article--texture reveal" style="--d: .2s">
-            <a href="articles/self-build-mortgage.html" class="article__link">
-              <span class="article__index" aria-hidden="true">03</span>
-              <div class="article__body">
-                <div class="article__meta">
-                  <span class="article__cat">בנייה עצמית</span>
-                  <span class="article__dot" aria-hidden="true"></span>
-                  <span class="article__time">7 דקות קריאה</span>
-                </div>
-                <h3 class="article__title">לבנות בית בלי להשתגע: הדרך הנכונה לניהול משכנתא לבנייה עצמית</h3>
-                <span class="article__read">
-                  <span>לקריאה</span>
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-                </span>
-              </div>
-            </a>
-          </article>
+        <div class="faq__list">
+          <details class="faq__item reveal" name="faq">
+            <summary class="faq__q">האם שיחת ההיכרות כרוכה בתשלום?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>לא. שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. בשיחה נבין את התמונה המלאה ונבדוק אם ואיך אפשר לעזור.</p></div>
+          </details>
+          <details class="faq__item reveal" name="faq" style="--d: .05s">
+            <summary class="faq__q">מה ההבדל בין יועצת משכנתאות לבין הפקיד בבנק?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>הבנקאי מייצג את הבנק. יועצת משכנתאות מייצגת אתכם: בונה אסטרטגיה פיננסית שמתאימה למטרות ולתזרים שלכם, ומנהלת משא ומתן מול כמה בנקים במקביל כדי להשיג את התנאים הטובים ביותר.</p></div>
+          </details>
+          <details class="faq__item reveal" name="faq" style="--d: .1s">
+            <summary class="faq__q">הבנק סירב לתת לי משכנתא. יש עוד מה לעשות?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>ברוב המקרים כן. סירוב בנקאי הוא כמעט אף פעם לא סיפור על הכנסה בלבד. מאתרים את החסם האמיתי בתיק, בונים אסטרטגיה ופונים לגורמים הנכונים, כולל מחלקות התיקים המורכבים.</p></div>
+          </details>
+          <details class="faq__item reveal" name="faq" style="--d: .15s">
+            <summary class="faq__q">מתי כדאי לבדוק מחזור משכנתא?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>כשהריביות במשק משתנות, כשההחזר החודשי מכביד, כשהמצב המשפחתי או הכלכלי השתנה, או פשוט כשעברו כמה שנים מאז שלקחתם את המשכנתא. בדיקה מקצועית מראה אם החיסכון מצדיק את עלויות הפירעון המוקדם.</p></div>
+          </details>
+          <details class="faq__item reveal" name="faq" style="--d: .2s">
+            <summary class="faq__q">אפשר לאחד הלוואות לתוך המשכנתא?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>במקרים רבים כן. ריכוז הלוואות קצרות ויקרות לתוך המשכנתא, בפריסה ארוכה ונוחה, יכול להקטין משמעותית את ההחזר החודשי ולהחזיר שקט לתזרים.</p></div>
+          </details>
+          <details class="faq__item reveal" name="faq" style="--d: .25s">
+            <summary class="faq__q">כמה זמן לוקח התהליך?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>זה תלוי בסוג העסקה ובמורכבות התיק. כבר בשיחה הראשונה נבנה יחד לוח זמנים ברור, כדי שתדעו בכל שלב מה קורה ומה השלב הבא.</p></div>
+          </details>
         </div>
       </div>
     </section>
@@ -1211,51 +1225,6 @@
   </section>
 
 
-    <!-- =====================================================
-         10. FAQ
-         TODO: answers are a draft for Ella's approval.
-         ===================================================== -->
-    <section class="faq section has-marble" id="faq" aria-labelledby="faqTitle">
-      <div class="container faq__layout">
-        <div class="faq__intro">
-          <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>שאלות נפוצות</p>
-          <h2 class="section-title" id="faqTitle" data-split>יש לכם שאלות? <em>ריכזנו תשובות.</em></h2>
-          <p class="faq__lead fade-up">לא מצאתם את מה שחיפשתם? אפשר לשאול אותי ישירות.</p>
-          <a href="https://wa.me/972542870003" class="btn btn--gold btn--sm magnetic fade-up" target="_blank" rel="noopener">
-            <span class="btn__label">שאלה ב-WhatsApp</span>
-            <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-          </a>
-        </div>
-
-        <div class="faq__list">
-          <details class="faq__item reveal" name="faq">
-            <summary class="faq__q">האם שיחת ההיכרות כרוכה בתשלום?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>לא. שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. בשיחה נבין את התמונה המלאה ונבדוק אם ואיך אפשר לעזור.</p></div>
-          </details>
-          <details class="faq__item reveal" name="faq" style="--d: .05s">
-            <summary class="faq__q">מה ההבדל בין יועצת משכנתאות לבין הפקיד בבנק?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>הבנקאי מייצג את הבנק. יועצת משכנתאות מייצגת אתכם: בונה אסטרטגיה פיננסית שמתאימה למטרות ולתזרים שלכם, ומנהלת משא ומתן מול כמה בנקים במקביל כדי להשיג את התנאים הטובים ביותר.</p></div>
-          </details>
-          <details class="faq__item reveal" name="faq" style="--d: .1s">
-            <summary class="faq__q">הבנק סירב לתת לי משכנתא. יש עוד מה לעשות?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>ברוב המקרים כן. סירוב בנקאי הוא כמעט אף פעם לא סיפור על הכנסה בלבד. מאתרים את החסם האמיתי בתיק, בונים אסטרטגיה ופונים לגורמים הנכונים, כולל מחלקות התיקים המורכבים.</p></div>
-          </details>
-          <details class="faq__item reveal" name="faq" style="--d: .15s">
-            <summary class="faq__q">מתי כדאי לבדוק מחזור משכנתא?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>כשהריביות במשק משתנות, כשההחזר החודשי מכביד, כשהמצב המשפחתי או הכלכלי השתנה, או פשוט כשעברו כמה שנים מאז שלקחתם את המשכנתא. בדיקה מקצועית מראה אם החיסכון מצדיק את עלויות הפירעון המוקדם.</p></div>
-          </details>
-          <details class="faq__item reveal" name="faq" style="--d: .2s">
-            <summary class="faq__q">אפשר לאחד הלוואות לתוך המשכנתא?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>במקרים רבים כן. ריכוז הלוואות קצרות ויקרות לתוך המשכנתא, בפריסה ארוכה ונוחה, יכול להקטין משמעותית את ההחזר החודשי ולהחזיר שקט לתזרים.</p></div>
-          </details>
-          <details class="faq__item reveal" name="faq" style="--d: .25s">
-            <summary class="faq__q">כמה זמן לוקח התהליך?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>זה תלוי בסוג העסקה ובמורכבות התיק. כבר בשיחה הראשונה נבנה יחד לוח זמנים ברור, כדי שתדעו בכל שלב מה קורה ומה השלב הבא.</p></div>
-          </details>
-        </div>
-      </div>
-    </section>
-
   </main>
 
     <!-- =====================================================
@@ -1301,7 +1270,6 @@
               <li><a href="contact.html">צור קשר</a></li>
               <li><a href="services.html">שירותים</a></li>
               <li><a href="#process">התהליך</a></li>
-              <li><a href="#knowledge">מרכז ידע</a></li>
               <li><a href="#faq">שאלות נפוצות</a></li>
             </ul>
           </div>

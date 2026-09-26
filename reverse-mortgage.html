@@ -13,13 +13,14 @@
   <link rel="icon" type="image/png" href="./assets/favicon-192-B3lmcI05.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"משכנתא הפוכה","serviceType":"ייעוץ משכנתאות","description":"משכנתא הפוכה (משכנתא לגיל השלישי) בבאר שבע ובדרום: מימוש ההון שבנכס לכל מטרה, בלי החזר חודשי שוטף. הסבר ברור של המשמעויות והשוואה בין הגופים.","url":"https://ellaozan-mashkanta.co.il/reverse-mortgage.html","provider":{"@id":"https://ellaozan-mashkanta.co.il/#business"},"areaServed":[{"@type":"City","name":"באר שבע"},{"@type":"Place","name":"הנגב והדרום"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"מי יכול לקחת משכנתא הפוכה?","acceptedAnswer":{"@type":"Answer","text":"בני הגיל השלישי שיש להם דירה בבעלות. תנאי הגיל המדויקים משתנים בין הגופים המלווים."}},{"@type":"Question","name":"צריך לשלם כל חודש?","acceptedAnswer":{"@type":"Answer","text":"ברוב המסלולים לא. ההלוואה והריבית נפרעות בסוף, בדרך כלל כשהנכס נמכר או מהעיזבון."}},{"@type":"Question","name":"מה קורה לדירה?","acceptedAnswer":{"@type":"Answer","text":"הדירה נשארת בבעלותכם ואתם ממשיכים לגור בה. הבנק או הגוף המלווה רושמים עליה שעבוד."}},{"@type":"Question","name":"מה המשמעות עבור הילדים?","acceptedAnswer":{"@type":"Answer","text":"הריבית מצטברת, ולכן החלק שנשאר ליורשים קטן עם השנים. כדאי לשתף את המשפחה בהחלטה."}}]}</script>
-  <script type="module" crossorigin src="./assets/contact-BPx_5ap1.js"></script>
-  <script type="module" crossorigin src="./assets/page-Crk2KgMu.js"></script>
-  <script type="module" crossorigin src="./assets/faq-CNa7CaHj.js"></script>
-  <script type="module" crossorigin src="./assets/page-service-BeA7ZHqx.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/contact-Ck7r5KJ7.css">
+  <script type="module" crossorigin src="./assets/contact-B5cYyjF1.js"></script>
+  <script type="module" crossorigin src="./assets/page-BT7N7SSK.js"></script>
+  <script type="module" crossorigin src="./assets/faq-B97iiwNc.js"></script>
+  <script type="module" crossorigin src="./assets/page-service-cS5ELJKK.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/contact-D8Gh8eYU.css">
   <link rel="stylesheet" crossorigin href="./assets/page-CejqtqGv.css">
   <link rel="stylesheet" crossorigin href="./assets/page-service-Cqi6Ud19.css">
+  <script>try { var a = JSON.parse(localStorage.getItem('eo-a11y') || '{}') || {}, h = document.documentElement, z = [1, 1.1, 1.2, 1.35, 1.5][a.zoom || 0] || 1; ['contrast', 'gray', 'links', 'headings', 'font', 'spacing', 'motion', 'cursor'].forEach(function (k) { if (a[k]) h.classList.add('a11y-' + k); }); if (z !== 1) { h.classList.add('a11y-zoom'); h.style.setProperty('--a11y-zoom', z); } } catch (e) {}</script>
   <script>if (/\.github\.io$/.test(location.hostname)) { var r = document.createElement('meta'); r.name = 'robots'; r.content = 'noindex'; document.head.appendChild(r); }</script>
   <link rel="canonical" href="https://ellaozan-mashkanta.co.il/reverse-mortgage.html">
   <meta property="og:type" content="website">
@@ -70,7 +71,6 @@
               <li><a class="main-nav__sublink" href="calculator-eligibility.html"><span class="main-nav__sublink-title">מחשבון זכאות למשכנתא</span><span class="main-nav__sublink-desc">כמה משכנתא תוכלו לקבל</span></a></li>
             </ul>
           </li>
-          <li><a class="main-nav__link" href="index.html#knowledge">מרכז ידע</a></li>
           <li><a class="main-nav__link" href="contact.html">צור קשר</a></li>
         </ul>
         <div class="main-nav__mobile-foot">
@@ -80,11 +80,6 @@
       </nav>
 
       <div class="site-header__actions">
-        <div class="lang-toggle" role="group" aria-label="בחירת שפה">
-          <button type="button" class="lang-toggle__btn is-active" aria-pressed="true" lang="he">HE</button>
-          <span class="lang-toggle__sep" aria-hidden="true">|</span>
-          <button type="button" class="lang-toggle__btn" aria-pressed="false" aria-disabled="true" disabled lang="ru" title="בקרוב">RU</button>
-        </div>
         <a href="#contact" class="btn btn--gold btn--sm magnetic">
           <span class="btn__label">לשיחת ייעוץ</span>
           <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
@@ -113,6 +108,44 @@
       <button type="button" class="site-notice__no" id="siteNoticeNo">ללא סטטיסטיקה</button>
     </div>
   </div>
+
+    <!-- Accessibility menu (built in-house, no third-party overlay). Logic: src/js/a11y.js,
+       styles: src/css/a11y.css, early apply: seoHead() in vite.config.js (localStorage "eo-a11y"). -->
+  <div class="a11y" id="a11y">
+    <button type="button" class="a11y__toggle" id="a11yToggle" aria-expanded="false" aria-controls="a11yPanel" aria-label="תפריט נגישות">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8.5c2.7.9 5.3 1.3 8 1.3s5.3-.4 8-1.3M12 9.8V15m0 0-3.2 6.5M12 15l3.2 6.5"/></svg>
+    </button>
+    <div class="a11y__panel" id="a11yPanel" role="dialog" aria-modal="false" aria-labelledby="a11yTitle" hidden>
+      <div class="a11y__head">
+        <p class="a11y__title" id="a11yTitle">תפריט נגישות</p>
+        <button type="button" class="a11y__close" id="a11yClose" aria-label="סגירת תפריט הנגישות"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+
+      <div class="a11y__size" role="group" aria-labelledby="a11ySizeLabel">
+        <span class="a11y__size-label" id="a11ySizeLabel">גודל טקסט</span>
+        <button type="button" class="a11y__step" data-a11y-zoom="-1" aria-label="הקטנת טקסט">א−</button>
+        <output class="a11y__size-value" id="a11yZoomValue" aria-live="polite">100%</output>
+        <button type="button" class="a11y__step" data-a11y-zoom="1" aria-label="הגדלת טקסט">א+</button>
+      </div>
+
+      <div class="a11y__grid">
+        <button type="button" class="a11y__opt" data-a11y="contrast" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18Z" class="fill"/></svg><span>ניגודיות גבוהה</span></button>
+        <button type="button" class="a11y__opt" data-a11y="gray" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 10.5a6 6 0 0 1-12 0C6 9.4 12 3 12 3Z"/></svg><span>גווני אפור</span></button>
+        <button type="button" class="a11y__opt" data-a11y="links" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>הדגשת קישורים</span></button>
+        <button type="button" class="a11y__opt" data-a11y="headings" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14M13 5v14M5 12h8M17 9l2-1v11"/></svg><span>הדגשת כותרות</span></button>
+        <button type="button" class="a11y__opt" data-a11y="font" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 10 5l6 14M6.5 14h7M17 19h4"/></svg><span>גופן קריא</span></button>
+        <button type="button" class="a11y__opt" data-a11y="spacing" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>ריווח טקסט</span></button>
+        <button type="button" class="a11y__opt" data-a11y="motion" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span>עצירת אנימציות</span></button>
+        <button type="button" class="a11y__opt" data-a11y="cursor" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 7-6 2-2 6Z"/></svg><span>סמן עכבר גדול</span></button>
+      </div>
+
+      <div class="a11y__foot">
+        <button type="button" class="a11y__reset" id="a11yReset">איפוס הגדרות</button>
+        <a class="a11y__statement" href="accessibility.html">הצהרת נגישות</a>
+      </div>
+    </div>
+  </div>
+
 
 
   <main id="main">
@@ -442,7 +475,6 @@
               <li><a href="contact.html">צור קשר</a></li>
               <li><a href="services.html">שירותים</a></li>
               <li><a href="index.html#process">התהליך</a></li>
-              <li><a href="index.html#knowledge">מרכז ידע</a></li>
               <li><a href="index.html#faq">שאלות נפוצות</a></li>
             </ul>
           </div>
