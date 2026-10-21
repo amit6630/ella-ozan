@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..800&family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="./assets/favicon-192-BgE7uP0G.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"מאמרים על משכנתאות","url":"https://ellaozan-mashkanta.co.il/articles.html","inLanguage":"he","publisher":{"@id":"https://ellaozan-mashkanta.co.il/#business"},"hasPart":[{"@type":"Article","headline":"איחוד הלוואות: ההחזר החודשי יורד, אבל האם באמת חסכתם כסף?","url":"https://ellaozan-mashkanta.co.il/article-loan-consolidation.html"},{"@type":"Article","headline":"מתי כדאי לשקול לבצע מיחזור משכנתה?","url":"https://ellaozan-mashkanta.co.il/article-when-to-refinance.html"},{"@type":"Article","headline":"האם \"לא\" מהבנק באמת אומר שאין לכם אפשרות לקבל משכנתה?","url":"https://ellaozan-mashkanta.co.il/article-bank-refusal.html"},{"@type":"Article","headline":"כמה כסף באמת צריך להביא לדירה? הטעות שלא לוקחים בחשבון כשמתכננים משכנתה","url":"https://ellaozan-mashkanta.co.il/article-down-payment.html"}]}</script>
-  <script type="module" crossorigin src="./assets/contact-DnYgLBNn.js"></script>
-  <script type="module" crossorigin src="./assets/page-DvoepTCc.js"></script>
-  <script type="module" crossorigin src="./assets/page-article-CVft6ea3.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/contact-Dy1cvfk_.css">
+  <script type="module" crossorigin src="./assets/contact-BS0iDPH1.js"></script>
+  <script type="module" crossorigin src="./assets/page-DtYsMw2U.js"></script>
+  <script type="module" crossorigin src="./assets/page-article-C2k5t9fV.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/contact-x79_z_O7.css">
   <link rel="stylesheet" crossorigin href="./assets/page-CejqtqGv.css">
   <link rel="stylesheet" crossorigin href="./assets/page-article-CFacesH-.css">
   <script>try { var a = JSON.parse(localStorage.getItem('eo-a11y') || '{}') || {}, h = document.documentElement, z = [1, 1.1, 1.2, 1.35, 1.5][a.zoom || 0] || 1; ['contrast', 'gray', 'links', 'headings', 'font', 'spacing', 'motion', 'cursor'].forEach(function (k) { if (a[k]) h.classList.add('a11y-' + k); }); if (z !== 1) { h.classList.add('a11y-zoom'); h.style.setProperty('--a11y-zoom', z); } } catch (e) {}</script>
@@ -38,6 +38,43 @@
 <body class="page-articles">
 
   <a class="skip-link" href="#main">דלגו לתוכן</a>
+    <!-- Accessibility menu (built in-house, no third-party overlay). Logic: src/js/a11y.js,
+       styles: src/css/a11y.css, early apply: seoHead() in vite.config.js (localStorage "eo-a11y"). -->
+  <div class="a11y" id="a11y">
+    <button type="button" class="a11y__toggle" id="a11yToggle" aria-expanded="false" aria-controls="a11yPanel" aria-label="תפריט נגישות">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8.5c2.7.9 5.3 1.3 8 1.3s5.3-.4 8-1.3M12 9.8V15m0 0-3.2 6.5M12 15l3.2 6.5"/></svg>
+    </button>
+    <div class="a11y__panel" id="a11yPanel" role="dialog" aria-modal="false" aria-labelledby="a11yTitle" hidden>
+      <div class="a11y__head">
+        <p class="a11y__title" id="a11yTitle">תפריט נגישות</p>
+        <button type="button" class="a11y__close" id="a11yClose" aria-label="סגירת תפריט הנגישות"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+
+      <div class="a11y__size" role="group" aria-labelledby="a11ySizeLabel">
+        <span class="a11y__size-label" id="a11ySizeLabel">גודל טקסט</span>
+        <button type="button" class="a11y__step" data-a11y-zoom="-1" aria-label="א− הקטנת טקסט">א−</button>
+        <output class="a11y__size-value" id="a11yZoomValue" aria-live="polite">100%</output>
+        <button type="button" class="a11y__step" data-a11y-zoom="1" aria-label="א+ הגדלת טקסט">א+</button>
+      </div>
+
+      <div class="a11y__grid">
+        <button type="button" class="a11y__opt" data-a11y="contrast" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18Z" class="fill"/></svg><span>ניגודיות גבוהה</span></button>
+        <button type="button" class="a11y__opt" data-a11y="gray" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 10.5a6 6 0 0 1-12 0C6 9.4 12 3 12 3Z"/></svg><span>גווני אפור</span></button>
+        <button type="button" class="a11y__opt" data-a11y="links" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>הדגשת קישורים</span></button>
+        <button type="button" class="a11y__opt" data-a11y="headings" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14M13 5v14M5 12h8M17 9l2-1v11"/></svg><span>הדגשת כותרות</span></button>
+        <button type="button" class="a11y__opt" data-a11y="font" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 10 5l6 14M6.5 14h7M17 19h4"/></svg><span>גופן קריא</span></button>
+        <button type="button" class="a11y__opt" data-a11y="spacing" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>ריווח טקסט</span></button>
+        <button type="button" class="a11y__opt" data-a11y="motion" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span>עצירת אנימציות</span></button>
+        <button type="button" class="a11y__opt" data-a11y="cursor" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 7-6 2-2 6Z"/></svg><span>סמן עכבר גדול</span></button>
+      </div>
+
+      <div class="a11y__foot">
+        <button type="button" class="a11y__reset" id="a11yReset">איפוס הגדרות</button>
+        <a class="a11y__statement" href="accessibility.html">הצהרת נגישות</a>
+      </div>
+    </div>
+  </div>
+
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <!-- =====================================================
@@ -108,43 +145,6 @@
     </div>
   </div>
 
-    <!-- Accessibility menu (built in-house, no third-party overlay). Logic: src/js/a11y.js,
-       styles: src/css/a11y.css, early apply: seoHead() in vite.config.js (localStorage "eo-a11y"). -->
-  <div class="a11y" id="a11y">
-    <button type="button" class="a11y__toggle" id="a11yToggle" aria-expanded="false" aria-controls="a11yPanel" aria-label="תפריט נגישות">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8.5c2.7.9 5.3 1.3 8 1.3s5.3-.4 8-1.3M12 9.8V15m0 0-3.2 6.5M12 15l3.2 6.5"/></svg>
-    </button>
-    <div class="a11y__panel" id="a11yPanel" role="dialog" aria-modal="false" aria-labelledby="a11yTitle" hidden>
-      <div class="a11y__head">
-        <p class="a11y__title" id="a11yTitle">תפריט נגישות</p>
-        <button type="button" class="a11y__close" id="a11yClose" aria-label="סגירת תפריט הנגישות"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-      </div>
-
-      <div class="a11y__size" role="group" aria-labelledby="a11ySizeLabel">
-        <span class="a11y__size-label" id="a11ySizeLabel">גודל טקסט</span>
-        <button type="button" class="a11y__step" data-a11y-zoom="-1" aria-label="הקטנת טקסט">א−</button>
-        <output class="a11y__size-value" id="a11yZoomValue" aria-live="polite">100%</output>
-        <button type="button" class="a11y__step" data-a11y-zoom="1" aria-label="הגדלת טקסט">א+</button>
-      </div>
-
-      <div class="a11y__grid">
-        <button type="button" class="a11y__opt" data-a11y="contrast" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18Z" class="fill"/></svg><span>ניגודיות גבוהה</span></button>
-        <button type="button" class="a11y__opt" data-a11y="gray" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 10.5a6 6 0 0 1-12 0C6 9.4 12 3 12 3Z"/></svg><span>גווני אפור</span></button>
-        <button type="button" class="a11y__opt" data-a11y="links" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>הדגשת קישורים</span></button>
-        <button type="button" class="a11y__opt" data-a11y="headings" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14M13 5v14M5 12h8M17 9l2-1v11"/></svg><span>הדגשת כותרות</span></button>
-        <button type="button" class="a11y__opt" data-a11y="font" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 10 5l6 14M6.5 14h7M17 19h4"/></svg><span>גופן קריא</span></button>
-        <button type="button" class="a11y__opt" data-a11y="spacing" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>ריווח טקסט</span></button>
-        <button type="button" class="a11y__opt" data-a11y="motion" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span>עצירת אנימציות</span></button>
-        <button type="button" class="a11y__opt" data-a11y="cursor" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 7-6 2-2 6Z"/></svg><span>סמן עכבר גדול</span></button>
-      </div>
-
-      <div class="a11y__foot">
-        <button type="button" class="a11y__reset" id="a11yReset">איפוס הגדרות</button>
-        <a class="a11y__statement" href="accessibility.html">הצהרת נגישות</a>
-      </div>
-    </div>
-  </div>
-
 
 
   <main id="main">
@@ -173,7 +173,8 @@
       </div>
     </section>
 
-    <section class="knowledge section art-hub" aria-label="כל המאמרים">
+    <section class="knowledge section art-hub" aria-labelledby="artAllTitle">
+      <h2 class="sr-only" id="artAllTitle">כל המאמרים</h2>
       <div class="container">
         <!-- Article cards, shared by the homepage knowledge teaser and articles.html.
      Generated with the articles; keep titles in sync with the article pages. -->
@@ -413,6 +414,7 @@
        FOOTER
        ===================================================== -->
   <footer class="site-footer">
+    <h2 class="sr-only">ניווט וקישורים באתר</h2>
     <div class="container">
       <div class="site-footer__top">
         <div class="site-footer__brand">
@@ -446,7 +448,7 @@
 
         <nav class="site-footer__nav" aria-label="ניווט תחתון">
           <div class="site-footer__col">
-            <h4 class="site-footer__heading">ניווט</h4>
+            <h3 class="site-footer__heading">ניווט</h3>
             <ul>
               <li><a href="about.html">אודות</a></li>
               <li><a href="contact.html">צור קשר</a></li>
@@ -458,7 +460,7 @@
             </ul>
           </div>
           <div class="site-footer__col">
-            <h4 class="site-footer__heading">שירותים</h4>
+            <h3 class="site-footer__heading">שירותים</h3>
             <ul>
               <li><a href="mortgage-advisor-beer-sheva.html">יועצת משכנתאות בבאר שבע</a></li>
               <li><a href="home-purchase-mortgage.html">רכישת דירה</a></li>
@@ -469,7 +471,7 @@
             </ul>
           </div>
           <div class="site-footer__col">
-            <h4 class="site-footer__heading">כלים</h4>
+            <h3 class="site-footer__heading">כלים</h3>
             <ul>
               <li><a href="calculator-mortgage.html">מחשבון משכנתה</a></li>
               <li><a href="calculator-eligibility.html">מחשבון זכאות</a></li>
